@@ -1,0 +1,29 @@
+/* Animation for Title */
+  .anim-typewriter {
+    color: #d9534f;
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: .1em solid transparent; /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .15em; /* Adjust as needed */
+    animation: 
+      typing 3.5s steps(40, end),
+      blink-caret .75s step-end infinite;
+  }
+  
+  /* The typing effect */
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+  
+  /* The typewriter cursor effect */
+  @keyframes blinkTextCursor{
+    from{border-right-color: rgba(255,255,255,.75);}
+    to{border-right-color: transparent;}
+  }
+  @keyframes removeTextCursor{
+    from{border-right-style: solid;}
+    to{border-right-style: none;}
+    
+  }
